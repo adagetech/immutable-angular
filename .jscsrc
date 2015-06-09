@@ -1,0 +1,8 @@
+{
+    "preset": "airbnb",
+    "validateIndentation": 4,
+    "validateLineBreaks": "LF",
+    "fileExtensions": [ ".js" ],
+    "esnext": true,
+    "excludeFiles": []
+}
