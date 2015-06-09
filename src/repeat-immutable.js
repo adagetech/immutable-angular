@@ -131,7 +131,7 @@ immutableModule.directive('repeatImmutable', function createRepeatImmutableDirec
 
                 // A mapping of unique identifiers for values to the elements to
                 // which they are rendered
-                let elements = Immutable.Map();
+                let elements = Immutable.OrderedMap();
 
                 // The set of all keys for which an element currently exists.
                 // Used for determining which elements can be removed after each
@@ -196,6 +196,10 @@ immutableModule.directive('repeatImmutable', function createRepeatImmutableDirec
                         // elements, return and do not transclude a new element
                         // for this item
                         if (elements.has(itemKey)) {
+                            if (elements.keySeq().indexOf(itemKey) === index) {
+                                return;
+                            }
+
                             destroyElementForItem(itemKey);
                         }
 
@@ -211,7 +215,7 @@ immutableModule.directive('repeatImmutable', function createRepeatImmutableDirec
                         $transclude(function(clone, scope) {
 
                             // track the element in the set of existing elements
-                            elements = elements.set(itemKey, clone);
+                            elements = elements.delete(itemKey).set(itemKey, clone);
 
                             // inject the repeated item onto element's scope
                             scope[itemIdentifier] = item;
