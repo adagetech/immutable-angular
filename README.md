@@ -89,11 +89,6 @@ Install gulp globally
 npm install -g gulp
 ```
 
-Install dependencies
-```
-npm install
-```
-
 To bundle sources to the dist directory:
 ```
 gulp bundle

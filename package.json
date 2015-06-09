@@ -21,7 +21,7 @@
     "url": "https://github.com/Adage-Technologies/immutable-angular/issues"
   },
   "homepage": "https://github.com/Adage-Technologies/immutable-angular",
-  "dependencies": {
+  "devDependencies": {
     "angular": "1.3.16",
     "angular-mocks": "1.3.16",
     "chai": "3.0.0",
@@ -43,5 +43,6 @@
     "merge2": "0.3.5",
     "mocha": "2.2.5",
     "phantomjs": "1.9.17"
-  }
+  },
+  "dependencies": {}
 }
