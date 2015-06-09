@@ -6,7 +6,6 @@ var babel = require('gulp-babel');
 var ngdocs = require('gulp-ngdocs');
 var replace = require('gulp-replace');
 var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
 var merge = require('merge2');
 var karma = require('karma').server;
 
@@ -22,7 +21,7 @@ gulp.task('bundle', function () {
 
     var transpiled = gulp
                     .src(['src/**/*.js', '!src/prefix.js', '!src/suffix.js'])
-                    .pipe(babel({ modules: 'ignore' }));
+                    .pipe(babel({ modules: 'ignore', comments: false }));
 
     var prefix = gulp.src(['src/prefix.js']);
 
@@ -30,7 +29,6 @@ gulp.task('bundle', function () {
 
     return merge(prefix, transpiled, suffix)
             .pipe(concat('immutable-angular.js'))
-            .pipe(uglify())
             .pipe(gulp.dest('dist'));
 });
 
