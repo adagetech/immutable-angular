@@ -7,10 +7,10 @@ Support for watching and enumerating [immutable-js](https://github.com/facebook/
 
 1. Install `immutable-angular` using npm or jspm
     ```
-    npm install @adage/immutable-angular
+    npm install immutable-angular
     ```
     ```
-    jspm install npm:@adage/immutable-angular
+    jspm install npm:immutable-angular
     ```
 
 2. Include the `'immutable'` module as a dependency of your module
