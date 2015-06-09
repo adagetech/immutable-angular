@@ -1,6 +1,8 @@
 # immutable-angular
 Support for watching and enumerating [immutable-js](https://github.com/facebook/immutable-js) collections in Angular 1.x
 
+[![Build Status](https://travis-ci.org/Adage-Technologies/immutable-angular.svg)](https://travis-ci.org/Adage-Technologies/immutable-angular)
+
 ## Getting started
 
 1. Install `immutable-angular` using npm or jspm
